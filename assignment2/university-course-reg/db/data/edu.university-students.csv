@@ -1,9 +1,9 @@
 ID,rollNumber,firstName,lastName,email,phone,dateOfBirth,admissionYear,currentSemester,cgpa,departmentCode,isActive
-a1,CSE001,Rahul,Verma,rahul@techuni.edu,9000000001,2004-01-10,2022,5,8.5,CSE,true
-b2,CSE002,Neha,Patel,neha@techuni.edu,9000000002,2004-02-15,2022,5,9.1,CSE,true
-c1,ECE001,Arjun,Reddy,arjun@techuni.edu,9000000003,2003-07-11,2021,7,7.9,ECE,true
-d1,ECE002,Sneha,Rao,sneha@techuni.edu,9000000004,2004-08-21,2022,5,8.7,ECE,true
-e1,ME001,Kiran,Kumar,kiran@techuni.edu,9000000005,2003-09-12,2021,7,7.8,MECH,true
-f1,ME002,Divya,Shah,divya@techuni.edu,9000000006,2004-03-17,2022,5,8.9,MECH,true
-92,CSE003,Ajay,Singh,ajay@techuni.edu,9000000007,2005-05-18,2023,3,8.1,CSE,true
-81,ECE003,Pooja,Nair,pooja@techuni.edu,9000000008,2005-06-19,2023,3,8.4,ECE,true
+a12345678909876543,CSE001,Rahul,Verma,rahul@techuni.edu,9000000001,2004-01-10,2022,5,8.5,CSE,true
+b23456789098765432,CSE002,Neha,Patel,neha@techuni.edu,9000000002,2004-02-15,2022,5,9.1,CSE,true
+c12345678909876543,ECE001,Arjun,Reddy,arjun@techuni.edu,9000000003,2003-07-11,2021,7,7.9,ECE,true
+d12345678909876543,ECE002,Sneha,Rao,sneha@techuni.edu,9000000004,2004-08-21,2022,5,8.7,ECE,true
+e12345678909876543,ME001,Kiran,Kumar,kiran@techuni.edu,9000000005,2003-09-12,2021,7,7.8,MECH,true
+f12345678909876543,ME002,Divya,Shah,divya@techuni.edu,9000000006,2004-03-17,2022,5,8.9,MECH,true
+923456789098765432,CSE003,Ajay,Singh,ajay@techuni.edu,9000000007,2005-05-18,2023,3,8.1,CSE,true
+812345678909876543,ECE003,Pooja,Nair,pooja@techuni.edu,9000000008,2005-06-19,2023,3,8.4,ECE,true
