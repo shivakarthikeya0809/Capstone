@@ -1,29 +1,35 @@
-### Get All Vehicles
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Vehicles
+### Get available vehicles
+GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/logistics/Vehicles?$filter=status eq 'Available'
 
-### Available Vehicles
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Vehicles?$filter=status eq 'Available'
+### Get shipments with status InTransit
+GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/logistics/Shipments?$filter=status eq 'InTransit'
 
-### All Drivers
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Drivers
+### Get all shipments for a specific customer
+GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/logistics/Shipments?$filter=customer_ID eq 'C001'
 
-### Drivers by Rating
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Drivers?$orderby=rating desc
+### Create a new shipment booking
+POST http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/logistics/Shipments
+Content-Type: application/json
 
-### All Customers
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Customers
+{
+  "ID": "S001",
+  "customer_ID": "C001",
+  "sourceCity": "Hyderabad",
+  "destinationCity": "Bangalore",
+  "status": "Booked"
+}
 
-### All Shipments
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Shipments
+### Update shipment status to Delivered
+PATCH http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/logistics/Shipments('S001')
+Content-Type: application/json
 
-### In Transit Shipments
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Shipments?$filter=status eq 'InTransit'
+{
+  "status": "Delivered",
+  "deliveredAt": "2026-06-01T10:00:00Z"
+}
 
-### Delivered Shipments
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Shipments?$filter=status eq 'Delivered'
+### Get routes between two cities
+GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/logistics/Routes?$filter=sourceCity eq 'Hyderabad' and destinationCity eq 'Bangalore'
 
-### All Routes
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/Routes
-
-### Service Records
-GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/Logistics/ServiceRecords
+### Get drivers sorted by rating descending
+GET http://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/logistics/Drivers?$orderby=rating desc
