@@ -1,0 +1,6 @@
+ID,name,email,phone,bio,company,designation,expertise,photoUrl,rating,totalTalks,isActive
+a5b6d8d8-cc4b-4ef9-9fe5-5e7f8a6dfe26,Ravi Kumar,ravi@mail.com,9000000001,Cloud Expert,SAP,Architect,Cloud,speaker1.jpg,4.8,50,true
+85952014-8777-4851-b364-dd3c106a4644,Priya Sharma,priya@mail.com,9412565564,AI Specialist,Google,Lead Engineer,AI,speaker2.jpg,4.9,80,true
+030d965f-cda2-499c-802e-d53918e14c5b,Vikram Rao,vikram@mail.com,9245652343,Data Scientist,TCS,Consultant,Data,speaker3.jpg,4.6,40,true
+70ec31ff-a5d6-49f0-a799-a2888a594be2,Neha Patel,neha@mail.com,9076987543,Cyber Security Expert,Infosys,Manager,Security,speaker4.jpg,4.7,60,true
+0baf242a-d114-42c1-9969-f206ac0fbf48,Ajay Singh,ajay@mail.com,9857580005,DevOps Engineer,Wipro,Lead,DevOps,speaker5.jpg,4.5,35,true

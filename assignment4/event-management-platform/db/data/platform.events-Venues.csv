@@ -1,0 +1,4 @@
+ID,name,address,city,capacity,type,amenities,hourlyRate,contactPerson,phone,isActive
+c85ead62-5227-4e66-9caf-dedf25c8d3c3,Tech Auditorium,Hitech City,Hyderabad,500,Auditorium,WiFi+Parking,10000,Rajesh,9876543210,true
+d940fd6d-ced9-40fd-a6f6-e8388817f385,Innovation Hall,Gachibowli,Hyderabad,300,ConferenceHall,WiFi+Projector,7000,Anita,9876543211,true
+fd76cf9a-2722-4530-8f2e-eacc59324505,Virtual Arena,Online,Virtual,1000,Virtual,Streaming,3000,Suresh,9876543212,true

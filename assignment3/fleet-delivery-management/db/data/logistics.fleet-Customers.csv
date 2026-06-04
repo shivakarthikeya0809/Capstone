@@ -1,0 +1,5 @@
+ID,name,company,phone,email,address,city,pincode,gstNumber,tier
+c1111111,Ravi Kumar,RK Traders,9000000001,ravi@rk.com,Hitech City,Hyderabad,500081,36ABCDE1234F1Z1,Regular
+c2222222,Anita Sharma,AS Exports,9000000002,anita@as.com,Madhapur,Hyderabad,500082,36ABCDE1234F1Z2,Premium
+c3333333,Vikram Patel,VP Logistics,9000000003,vikram@vp.com,Gachibowli,Hyderabad,500032,36ABCDE1234F1Z3,Enterprise
+c4444444,Priya Nair,PN Stores,9000000004,priya@pn.com,Kukatpally,Hyderabad,500072,36ABCDE1234F1Z4,Regular

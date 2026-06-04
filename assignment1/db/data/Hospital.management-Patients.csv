@@ -1,0 +1,6 @@
+ID,firstName,lastName,dateOfBirth,gender,bloodGroup,phone,email,address,emergencyContact,registrationDate
+a282a83e-d99d-4abc-b149-f5749f1eefda,Ravi,Kumar,1995-05-10,Male,O_POS,9876543201,ravi@test.com,Hyderabad,9865987654,2026-05-01
+14be1007-b156-4942-bcb3-6a4c792e3e7c,Meena,Reddy,1998-03-15,Female,A_POS,9978654909,meena@test.com,Vijayawada,9675784870,2026-05-02
+451239d9-0a5d-4088-8a39-f5a19b4b48b2,Arun,Patel,1992-11-20,Male,B_POS,9809764532,arun@test.com,Visakhapatnam,9589768780,2026-05-03
+c22c01ab-86de-4c91-93b0-5f2f6b9878c4,Sneha,Sharma,2000-07-25,Female,AB_POS,9845230978,sneha@test.com,Guntur,9134987899,2026-05-04
+b55a31ba-e309-42f4-aa4e-e8f88423a220,Rahul,Verma,1997-09-12,Male,O_NEG,9856789848,rahul@test.com,Rajahmundry,7987654461,2026-05-05

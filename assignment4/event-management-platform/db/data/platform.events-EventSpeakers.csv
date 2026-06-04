@@ -1,0 +1,7 @@
+eventId,speakerId,topic,sessionTime,sessionDuration,roomNumber
+e12345678909876,aaaaaaaa,SAP CAP,09:00:00,60,A101
+e12345678909876,bbbbbbbb,AI in SAP,11:00:00,45,A102
+e23456789098765,bbbbbbbb,Future AI,10:00:00,90,H201
+e23456789098765,cccccccc,Data Analytics,12:00:00,60,H202
+e34567890987654,dddddddd,Cyber Security,09:30:00,60,C101
+e45678909876543,eeeeeeee,DevOps Cloud,11:00:00,60,V001

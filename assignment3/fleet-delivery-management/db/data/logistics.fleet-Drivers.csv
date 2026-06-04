@@ -1,0 +1,5 @@
+ID,name,licenseNumber,licenseExpiry,phone,email,experience,rating,status,vehicleId,joinDate
+a12344,Ramesh Kumar,DL12345,2028-01-01,9887686558,ramesh@fleet.com,5,4.8,Available,11111111,2021-06-01
+b13435,Suresh Rao,DL23456,2027-05-10,9587676786,suresh@fleet.com,7,4.5,OnTrip,22222222,2020-04-15
+c12455,Ajay Singh,DL34567,2029-02-20,9876349865,ajay@fleet.com,4,4.2,Available,33333333,2022-01-10
+d23111,Kiran Reddy,DL45678,2028-09-30,9987657890,kiran@fleet.com,6,4.9,OnLeave,44444444,2021-11-05

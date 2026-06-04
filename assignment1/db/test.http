@@ -1,0 +1,41 @@
+### Get all doctors filtered by specialization
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/hospital/Doctors?$filter=specialization eq 'Cardiology'
+
+### Get appointments for a specific date
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/hospital/Appointments?$filter=appointmentDate eq 2026-06-02
+
+### Create a new patient
+POST https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/hospital/Patients
+Content-Type: application/json
+
+{
+  "ID": "P001",
+  "name": "Ravi Kumar",
+  "age": 30,
+  "gender": "Male",
+  "bloodGroup": "O+",
+  "phone": "9876543210"
+}
+
+### Create a new appointment
+POST https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/hospital/Appointments
+Content-Type: application/json
+
+{
+  "ID": "A001",
+  "appointmentDate": "2026-06-02",
+  "status": "Scheduled",
+  "doctor_ID": "D001",
+  "patient_ID": "P001"
+}
+
+### Get patients filtered by blood group
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/hospital/Patients?$filter=bloodGroup eq 'O+'
+
+### Update appointment status to Completed
+PATCH https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/hospital/Appointments('A001')
+Content-Type: application/json
+
+{
+  "status": "Completed"
+}

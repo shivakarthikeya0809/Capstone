@@ -1,0 +1,6 @@
+ID,registrationNumber,type,make,model,year,capacity,fuelType,status,lastServiceDate,mileage,insuranceExpiry
+11111111,TS09AB1234,Bike,Hero,Splendor,2022,100,Petrol,Available,2025-01-10,45000,2027-01-10
+22222222,TS09CD5678,Van,Tata,Winger,2021,1000,Diesel,OnTrip,2025-02-15,80000,2026-12-31
+33333333,TS09EF9012,Truck,Ashok Leyland,Dost,2020,3000,Diesel,Available,2025-03-01,120000,2026-10-15
+44444444,TS09GH3456,Trailer,BharatBenz,TrailerX,2019,10000,Diesel,Maintenance,2025-04-05,150000,2026-08-20
+55555555,TS09IJ7890,Van,Mahindra,Jeeto,2023,800,CNG,Available,2025-05-01,25000,2027-05-01

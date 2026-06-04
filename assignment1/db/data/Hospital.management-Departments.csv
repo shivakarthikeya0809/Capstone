@@ -1,0 +1,5 @@
+ID,name,floor,head,capacity,phone,isActive
+0a058540-d41a-4c52-b3bc-3e856d2277d2,Cardiology,1,Dr ram,50,9154080009,true
+fa76ac7d-5208-45ff-b14a-2b43bcc69d0b,Neurology,2,Dr shiva,40,7288040633,true
+47a46d33-d0c9-4c0b-a40e-a056b0caa6c5,Orthopedics,3,Dr karthik,60,9010717001,true
+c5c3a780-8c06-46d4-835e-1acb9c8d8c0b,Pediatrics,4,Dr priya,30,9010717002,true

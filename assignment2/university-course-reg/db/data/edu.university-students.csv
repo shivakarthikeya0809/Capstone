@@ -1,0 +1,9 @@
+ID,rollNumber,firstName,lastName,email,phone,dateOfBirth,admissionYear,currentSemester,cgpa,departmentCode,isActive
+158f571f-c63f-469d-a007-8a5a911860c1,CSE001,Rahul,Verma,rahul@techuni.edu,9000000001,2004-01-10,2022,5,8.5,CSE,true
+55513754-d7f3-4afc-ba59-bdd55120cdea,CSE002,Neha,Patel,neha@techuni.edu,9000000002,2004-02-15,2022,5,9.1,CSE,true
+fdc4993d-5fbb-4a67-889d-35a7a1c71297,ECE001,Arjun,Reddy,arjun@techuni.edu,9000000003,2003-07-11,2021,7,7.9,ECE,true
+627265aa-74c6-416c-a307-7292042690a2,ECE002,Sneha,Rao,sneha@techuni.edu,9000000004,2004-08-21,2022,5,8.7,ECE,true
+66717e2f-6480-440d-8b75-c578ee51b95e,ME001,Kiran,Kumar,kiran@techuni.edu,9000000005,2003-09-12,2021,7,7.8,MECH,true
+1ea1223e-377b-449b-b848-7f53af3d4bfb,ME002,Divya,Shah,divya@techuni.edu,9000000006,2004-03-17,2022,5,8.9,MECH,true
+f73d32f7-9739-44c9-8ad6-70057fc586b4,CSE003,Ajay,Singh,ajay@techuni.edu,9000000007,2005-05-18,2023,3,8.1,CSE,true
+49f6ba5c-b2f7-42d1-904a-7228e9a91d11,ECE003,Pooja,Nair,pooja@techuni.edu,9000000008,2005-06-19,2023,3,8.4,ECE,true

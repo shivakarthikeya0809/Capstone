@@ -1,0 +1,7 @@
+ID,firstName,lastName,specialization,qualification,experience,fee,department_ID,phone,email,availableDays,isActive
+5faeb011-14a8-446a-b7fd-fac090153163,Ram,Reddy,Cardiology,MBBS MD,10,500,01,915408009,ram@gmail.com,"Mon,Tue,Wed",true
+1d653535-92c1-4ae8-9771-1ad71d2fdece,shiva,Kumar,Neurology,MBBS DM,8,600,02,7288040633,shiva@gmail.com,"Mon,Fri",true
+216f5c61-4e57-4b9f-9d4c-9f9dae01f5a3,karthik,Reddy,Orthopedics,MBBS MS,12,700,03,8876549802,karthik@gmail.com,"Tue,Thu",true
+b1dc8bcc-88de-4635-baaf-e0e843b1b10c,Priya,Sharma,Pediatrics,MBBS MD,6,400,04,9963789654,priya@gmail.com,"Mon,Wed,Fri",true
+b8775838-d08d-4da2-a569-de8ca0a40a57,Anil,Verma,Cardiology,MBBS DM,15,800,01,9706587965,anil@gmail.com,"Mon,Tue",true
+2f8d4027-b5d5-45aa-82ac-197de61d07e4,Kiran,Patel,Neurology,MBBS DM,9,650,02,9876543206,kiran@gmail.com,"Wed,Thu",true

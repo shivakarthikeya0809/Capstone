@@ -1,0 +1,6 @@
+ID,fromCity,toCity,distance,estimatedHours,tollCharges,isActive
+r11111,Hyderabad,Vijayawada,280,5.5,500,true
+r22222,Hyderabad,Warangal,150,3.0,150,true
+r33333,Hyderabad,Nizamabad,180,4.0,200,true
+r44444,Hyderabad,Karimnagar,160,3.5,180,true
+r55555,Hyderabad,Khammam,190,4.0,220,true

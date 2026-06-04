@@ -1,0 +1,5 @@
+ID,title,description,eventType,venueId,startDate,endDate,startTime,endTime,maxAttendees,registeredCount,ticketPrice,status,organizerName,organizerEmail,tags
+2fba5d3b-cfc4-4c81-a0a4-be1edc974d3f,SAP CAP Workshop,CAP Training,Workshop,1111,2026-06-10,2026-06-10,09:00:00,17:00:00,300,150,500,Published,EventHub,admin@eventhub.com,SAP,CAP
+0bcd08a9-c6af-46f6-932a-23ff7de5bace,AI Summit,AI Trends,Conference,2222,2026-07-05,2026-07-05,10:00:00,18:00:00,250,180,1000,Published,EventHub,admin@eventhub.com,AI,ML
+80ddc3b9-1931-4f81-a295-7ac774d41b02,Cyber Meet,Security Event,Meetup,2222,2026-08-01,2026-08-01,09:00:00,16:00:00,200,75,300,Draft,EventHub,admin@eventhub.com,Security
+aa51c2aa-1a1b-46e0-a365-9d55b706cc2b,Cloud Webinar,Cloud Session,Webinar,3333,2026-09-15,2026-09-15,11:00:00,13:00:00,1000,400,100,Published,EventHub,admin@eventhub.com,Cloud

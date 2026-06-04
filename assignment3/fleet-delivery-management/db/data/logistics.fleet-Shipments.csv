@@ -1,0 +1,9 @@
+ID,trackingNumber,customerId,driverId,vehicleId,pickupAddress,deliveryAddress,pickupCity,deliveryCity,weight,status,bookedAt,estimatedDelivery,actualDistance,charges,paymentStatus
+s1342,SL-2026-99887,c1111111,a12344,11111111,Hitech City,Ameerpet,Hyderabad,Hyderabad,50,Booked,2026-05-01T10:00:00Z,2026-05-02T18:00:00Z,20,500,Pending
+s1234,SL-2026-34546,c2222222,b13435,22222222,Madhapur,Vijayawada,Hyderabad,Vijayawada,500,InTransit,2026-05-02T09:00:00Z,2026-05-03T18:00:00Z,280,4500,Paid
+s1243,SL-2026-76987,c3333333,c12455,33333333,Gachibowli,Warangal,Hyderabad,Warangal,700,Delivered,2026-05-01T08:00:00Z,2026-05-01T20:00:00Z,150,2500,Paid
+s4235,SL-2026-32345,c4444444,a12344,11111111,Kukatpally,Nizamabad,Hyderabad,Nizamabad,100,OutForDelivery,2026-05-03T09:00:00Z,2026-05-04T18:00:00Z,180,1800,COD
+s2454,SL-2026-24565,c1111111,c12455,33333333,Hitech City,Karimnagar,Hyderabad,Karimnagar,300,Booked,2026-05-04T09:00:00Z,2026-05-05T18:00:00Z,160,2200,Pending
+s2455,SL-2026-53256,c2222222,b13435,22222222,Madhapur,Khammam,Hyderabad,Khammam,450,InTransit,2026-05-04T12:00:00Z,2026-05-05T18:00:00Z,190,3000,Pa
+s1233,SL-2026-21456,c3333333,a12344,11111111,Gachibowli,Adilabad,Hyderabad,Adilabad,150,Booked,2026-05-05T08:00:00Z,2026-05-06T18:00:00Z,320,4000,Pending
+s2456,SL-2026-24523,c4444444,c12455,33333333,Kukatpally,Suryapet,Hyderabad,Suryapet,250,Delivered,2026-05-02T07:00:00Z,2026-05-02T20:00:00Z,140,2000,Paid
