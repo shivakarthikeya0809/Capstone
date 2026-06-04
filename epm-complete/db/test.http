@@ -1,0 +1,53 @@
+### 1. Get all products
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/admin/Products
+
+### 2. Get all suppliers
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/admin/Suppliers
+
+### 3. Get all customers
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/admin/Customers
+
+### 4. Filter products by stock
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/admin/Products?$filter=stock gt 10
+
+### 5. Order products by price
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/admin/Products?$orderby=price desc
+
+### 6. Expand supplier details
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/admin/Products?$expand=supplier
+
+### 7. Expand category details
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/admin/Products?$expand=category
+
+### 8. Product Catalog Report
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/reports/ProductCatalog
+
+### 9. Order Report
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/reports/OrderReport
+
+### 10. Low Stock Alert
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/reports/LowStockAlert
+
+### 11. Filter report
+GET https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/reports/OrderReport?$filter=status eq 'OPEN'
+
+### 12. Deep Insert Sales Order
+POST https://port4004-workspaces-ws-76zvt.ap21.trial.applicationstudio.cloud.sap/odata/v4/admin/SalesOrders
+Content-Type: application/json
+
+{
+  "orderNumber": "SO9999",
+  "orderDate": "2026-05-20",
+  "amount": 110000,
+  "currency_code": "INR",
+  "status": "OPEN",
+  "customer_ID": "CUS1",
+  "items": [
+    {
+      "product_ID": "PROD1",
+      "quantity": 2,
+      "unitPrice": 55000,
+      "netAmount": 110000
+    }
+  ]
+}

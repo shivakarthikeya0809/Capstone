@@ -1,0 +1,5 @@
+ID,name,contact,email,phone,city,country_code,isActive
+SUP1,Dell Technologies,Raj,dell@example.com,9876543210,Bangalore,IN,true
+SUP2,HP India,Kumar,hp@example.com,9876543211,Hyderabad,IN,true
+SUP3,Lenovo India,Amit,lenovo@example.com,9876543212,Pune,IN,true
+SUP4,Apple India,Rohit,apple@example.com,9876543213,Mumbai,IN,true

@@ -1,0 +1,5 @@
+ID,name,email,phone,city,country_code,creditLimit
+CUS1,Ravi,ravi@gmail.com,9999999991,Hyderabad,IN,100000
+CUS2,Priya,priya@gmail.com,9999999992,Bangalore,IN,150000
+CUS3,Arjun,arjun@gmail.com,9999999993,Chennai,IN,200000
+CUS4,Sneha,sneha@gmail.com,9999999994,Pune,IN,120000
