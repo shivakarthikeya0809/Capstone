@@ -1,16 +1,16 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue Jun 16 2026 06:35:50 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Mon Jun 22 2026 10:27:35 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.26.0|
+|**App Generator Version**<br>1.27.0|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V4|
 |**Service Type**<br>Local CAP|
 |**Service URL**<br>http://localhost:4004/purchasing/|
-|**Module Name**<br>project2|
-|**Application Title**<br>App game|
-|**Namespace**<br>|
+|**Module Name**<br>project4|
+|**Application Title**<br>App Title|
+|**Namespace**<br>com.epm|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.149.0|
 |**Enable TypeScript**<br>False|
@@ -18,7 +18,7 @@
 |**Main Entity**<br>PurchaseOrders|
 |**Navigation Entity**<br>items|
 
-## project2
+## project4
 
 An SAP Fiori application.
 
@@ -26,7 +26,7 @@ An SAP Fiori application.
 
 -   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated app, start your CAP project:  and navigate to the following location in your browser:
 
-http://localhost:4004/project2/index.html
+http://localhost:4004/com.epm.project4/index.html
 
 #### Pre-requisites:
 

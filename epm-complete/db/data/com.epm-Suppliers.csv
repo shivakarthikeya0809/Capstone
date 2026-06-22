@@ -1,5 +1,6 @@
 ID,name,contact,email,phone,city,country_code,isActive
-SUP1,Dell Technologies,Raj,dell@example.com,9876543210,Bangalore,IN,true
-SUP2,HP India,Kumar,hp@example.com,9876543211,Hyderabad,IN,true
-SUP3,Lenovo India,Amit,lenovo@example.com,9876543212,Pune,IN,true
-SUP4,Apple India,Rohit,apple@example.com,9876543213,Mumbai,IN,true
+44044913-d1d6-4fbb-81cf-08d5ca02f862,name-4404491,contact-4404491,email-4404491,phone-4404491,city-4404491,029,false
+3743360c-22cc-432f-8cab-76c4e4a2d1a6,name-3743360,contact-3743360,email-3743360,phone-3743360,city-3743360,029,true
+3743361b-6129-4582-8b50-882ca36ba505,name-3743361,contact-3743361,email-3743361,phone-3743361,city-3743361,029,false
+37433627-49da-4a82-9cc9-7d98abab5838,name-3743362,contact-3743362,email-3743362,phone-3743362,city-3743362,029,true
+37433638-0b49-4e2e-8013-d9d58f3d84f7,name-3743363,contact-3743363,email-3743363,phone-3743363,city-3743363,029,false

@@ -15,9 +15,9 @@ sap.ui.define(['sap/fe/test/ObjectPage', 'sap/ui/test/actions/Press'], function(
 
     return new ObjectPage(
         {
-            appId: 'project2',
-            componentId: 'PurchaseOrdersObjectPage',
-            contextPath: '/PurchaseOrders'
+            appId: 'com.epm.project4',
+            componentId: 'PurchaseOrderItemsObjectPage',
+            contextPath: '/PurchaseOrders/items'
         },
         CustomPageDefinitions
     );

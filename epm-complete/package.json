@@ -12,7 +12,8 @@
   "scripts": {
     "start": "cds-serve",
     "watch-project1": "cds watch --open com.epm.project1/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-project2": "cds watch --open project2/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-project2": "cds watch --open project2/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-project4": "cds watch --open com.epm.project4/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "cds": {
     "requires": {
@@ -29,8 +30,7 @@
     "app/*"
   ],
   "sapux": [
-    "app/project1",
-    "app/project2",
-    "app/project2"
+    
+    "app/project4"
   ]
 }

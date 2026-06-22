@@ -1,7 +1,7 @@
 {
   "_version": "1.85.0",
   "sap.app": {
-    "id": "project2",
+    "id": "com.epm.project4",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -12,8 +12,8 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
-      "version": "1.26.0",
-      "toolsId": "50bbaf28-0e7d-4bb3-88d8-a3061eac364f"
+      "version": "1.27.0",
+      "toolsId": "6960c145-576d-49a0-87e7-b448c7693861"
     },
     "dataSources": {
       "mainService": {
@@ -60,7 +60,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "project2.i18n.i18n"
+          "bundleName": "com.epm.project4.i18n.i18n"
         }
       },
       "": {
@@ -157,34 +157,6 @@
       }
     }
   },
-  "PurchaseOrdersObjectPage": {
-    "type":"component",
-    "id":"PurchaseOrdersObjectPage",
-    "name":"sap.fe.templates.ObjectPage",
-    "options": {
-    "settings": {
-      "contextPath": "/PurchaseOrders",
-      "content": {
-        "body": {
-          "sections": {
-            "customStockSection": {
-              "template": "project2.ext.CustomSection",
-              "title": "Stock Visualization",
-              "position": { "placement": "After", "anchor": "GeneralInfoSection" }
-            }
-          }
-        }
-      }
-    },
-    "navigation":{
-      "items":{
-        "detail":{
-          "route":"PurchaseOrderItemsObjectPage"
-        }
-      }
-    }
-  }
-},
   "sap.fiori": {
     "registrationIds": [],
     "archeType": "transactional"

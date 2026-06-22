@@ -94,4 +94,4 @@ entity PurchaseOrderItems as projection on db.PurchaseOrderItems {
   }
 }
 
-using from '../app/project2/annotations';
+using from '../app/project4/annotations';
