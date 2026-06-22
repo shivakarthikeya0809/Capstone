@@ -1,0 +1,33 @@
+let a=5;
+let b=10;
+let op="+";
+let result;
+if(op==="+")
+{
+    result =a+b;
+}
+elseif(op==="-")
+{
+    result=a-b;
+}
+elseif(op==="*")
+{
+    result=a*b;
+}
+elseif(op==="/")
+{
+    result=a/b;
+}
+elseif(op==="mod")
+{
+    result=a%b;
+}
+elseif(op==="%")
+{
+    result=(a/b)*100;
+}
+elseif(op==="pow")
+{
+    result=a**b;
+}
+console.log("result",result);

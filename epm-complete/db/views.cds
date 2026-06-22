@@ -20,7 +20,7 @@ entity OrderReport as select from epm.SalesOrders {
     ID,
     orderNumber,
     customer.name as customerName,
-    amount,
+    netAmount,
     orderDate,
     status
 };

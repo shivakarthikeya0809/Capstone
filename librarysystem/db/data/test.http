@@ -1,0 +1,109 @@
+//GET https://localhost:4004/catalog
+
+//GET  http://localhost:4004/catalog/Books
+
+//GET http://localhost:4004/catalog/Books(b1000001-0000-0000-0000-000000000001)
+
+//GET http://localhost:4004/catalog/Authors
+
+//GET http://localhost:4004/catalog/Books?$expand=author
+
+//GET http://localhost:4004/catalog/Authors?$expand=books
+
+//GET 	http://localhost:4004/catalog/Books?$filter=isActive eq true
+
+//GET 	http://localhost:4004/catalog/Books?$orderby=price desc
+
+//GET 	http://localhost:4004/catalog/Books?$top=3 
+
+//GET 	http://localhost:4004/catalog/$metadata
+//GET http://localhost:4004/catalog/Authors?$select=name,email
+
+//POST http://localhost:4004/catalog/Books
+Content-Type: application/json
+
+{
+  "title": "New Book",
+  "price": 15.99
+}
+
+### Create a new author (should work in admin!)
+//POST http://localhost:4004/admin/Authors
+Content-Type: application/json
+
+{
+  "name": "Dan Brown",
+  "country": "United States",
+  "email": "dan@example.com"
+}
+
+### Create a book for the new author
+//POST http://localhost:4004/admin/Books
+//Content-Type: application/json
+
+//{
+  //"title": "The Da Vinci Code",
+  //"genre": "Thriller",
+  //"price": 14.99,
+  //"stock": 100,
+  //"rating": 4.2,
+  //"isbn": "9780307474278",
+  //"publihDate":"2003-03-18",
+  //"author_ID": "75ef69be-180c-4100-9ab4-73283b68c025"
+//}
+
+//GET http://localhost:4004/admin/Authors
+
+//GET http://localhost:4004/catalog/Authors
+
+//Supplier from germany:
+//GET http://localhost:4004/odata/v4/admin/Suppliers?$filter=country eq 'Germany'&$expand=products
+
+//Top 5 hiihgest orders of this month:
+//GET http://localhost:4004/odata/v4/admin/SalesOrders?$filter=createdAt ge 2026-06-01&$orderby=netAmount desc&$top=5
+
+//Products in electronics category sorted by price:
+//GET http://localhost:4004/odata/v4/admin/Products?$filter=category eq 'Electronics'&$orderby=price asc
+
+//Page 2 of customers (15 per page) sorted by name:
+//GET http://localhost:4004/odata/v4/admin/Customers?$orderby=name asc&$skip=15&$top=15
+
+//Orders with status 'New' and amount over $1000, with customer name
+//GET http://localhost:4004/odata/v4/admin/SalesOrders?$filter=status eq 'New' and netAmount gt 1000&$expand=customer($select=name)
+
+//POST http://localhost:4004/admin/Books
+//Content-Type: application/json
+
+//{
+  //"title": "The Great Gatsby",
+  //"genre": "Fiction",
+  //"price": 10.99,
+  //"stock": 50,
+  //"author_ID": "a1000001-0000-0000-0000-000000000003"
+//}
+
+//GET http://localhost:4004/catalog/Books(b1000001-0000-0000-0000-000000000003)/author
+
+GET http://localhost:4004/catalog/Books?$filter=genre eq 'Fantasy'&$expand=author
+
+// Cheapest books first (ascending is default)
+GET http://localhost:4004/catalog/Books?$orderby=price
+
+// Most expensive books first
+GET http://localhost:4004/catalog/Books?$orderby=price desc
+
+// Highest rated books first
+GET http://localhost:4004/catalog/Books?$orderby=rating desc
+
+// Alphabetical by title
+GET http://localhost:4004/catalog/Books?$orderby=title
+
+// Sort by genre, then by title within each genre
+GET http://localhost:4004/catalog/Books?$orderby=genre,title
+
+// Newest orders first, then by amount descending
+GET http://localhost:4004/sales/Orders?$orderby=orderDate desc,grossAmount desc
+
+// Sort by multiple criteria with mixed directions
+GET http://localhost:4004/catalog/Books?$orderby=genre asc,price desc
+// First groups by genre A-Z, then within each genre: most expensive first

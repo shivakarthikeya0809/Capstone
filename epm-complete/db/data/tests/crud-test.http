@@ -1,0 +1,112 @@
+@sales = http://localhost:4004/odata/v4/sales
+
+### Test 1: Create order without customer (should fail)
+POST {{sales}}/SalesOrders
+Content-Type: application/json
+
+{
+  "orderDate": "2026-06-15",
+  "items": [
+    { "product_ID": "PROD1", "quantity": 2, "unitPrice": 50.00 }
+  ]
+}
+
+### Test 2: Create order with past date (should fail)
+POST {{sales}}/SalesOrders
+Content-Type: application/json
+
+{
+  "customer_ID": "CUS1",
+  "orderDate": "2020-01-01",
+  "items": [
+    { "product_ID": "PROD1", "quantity": 2, "unitPrice": 50.00 }
+  ]
+}
+
+### Test 3: Create order with invalid item (quantity 0)
+POST {{sales}}/SalesOrders
+Content-Type: application/json
+
+{
+  "customer_ID": "CUS2",
+  "orderDate": "2026-06-15",
+  "items": [
+    { "product_ID": "PROD1", "quantity": 0, "unitPrice": 50.00 }
+  ]
+}
+
+### Test 4: Create valid order (should succeed + auto-calculate totals!)
+POST {{sales}}/SalesOrders
+Content-Type: application/json
+
+{
+  "customer_ID": "CUS1",
+  "orderNumber": "SO-201",
+  "orderDate": "2026-06-15",
+  "currency_code": "USD",
+  "items": [
+    { "product_ID": "PROD2", "quantity": 2, "unitPrice": 499.99 },
+    { "product_ID": "PROD2", "quantity": 1, "unitPrice": 29.99 }
+  ]
+}
+
+### Test 5: Try invalid status transition (New → Delivered should fail)
+PATCH {{sales}}/SalesOrders(c652a1f6-489f-486c-ae4c-27d6ac91aef1)
+Content-Type: application/json
+
+{
+  "status": "Delivered"
+}
+
+### Test 6: Valid status transition (New → Confirmed)
+PATCH {{sales}}/SalesOrders(c652a1f6-489f-486c-ae4c-27d6ac91aef1)
+Content-Type: application/json
+
+{
+  "status": "Confirmed"
+}
+
+### Call unbound action: GenerateReport
+POST http://localhost:4004/analytics/GenerateReport
+Content-Type: application/json
+
+{
+  "reportType": "Sales",
+  "startDate": "2026-01-01",
+  "endDate": "2026-05-31"
+}
+
+### Confirm a specific order
+POST http://localhost:4004/sales/SalesOrders(e25ec2da-0f76-496f-aedf-c41845ce87b1)/confirm
+Content-Type: application/json
+
+{}
+
+### Cancel a specific order (with reason parameter)
+POST http://localhost:4004/sales/SalesOrders(61e51da4-730f-4935-9b69-3a6a8802a3d4)/cancel
+Content-Type: application/json
+
+{
+  "reason": "Customer changed their mind"
+}
+
+### Ship an order (with tracking info)
+POST http://localhost:4004/sales/SalesOrders(e25ec2da-0f76-496f-aedf-c41845ce87b1)/ship
+Content-Type: application/json
+
+{
+  "trackingNumber":"TRK-2026-ABC123",
+  "carrier": "FedEx"
+}
+###
+GET http://localhost:4004/sales/SalesOrders
+###
+POST http://localhost:4004/sales/SalesOrders
+Content-Type: application/json
+
+{
+  "orderNumber": "SO600",
+  "status": "New",
+  "customer_ID": "2615bb3e-4774-4c41-bfad-cfa85a5b8077",
+  "orderDate": "2026-06-08"
+}

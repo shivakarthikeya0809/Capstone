@@ -1,0 +1,204 @@
+// Available books with calculated fields:
+GET http://localhost:4004/reports/AvailableBooks
+
+// Overdue borrowings with member contact info:
+GET http://localhost:4004/reports/OverdueBorrowings
+
+// Book pricing with GST calculations:
+GET http://localhost:4004/reports/BookPricing
+
+// Filter premium books only:
+GET http://localhost:4004/reports/BookPricing?$filter=priceCategory eq 'Premium'
+
+// Member activity:
+GET http://localhost:4004/reports/MemberActivity?$filter=isActive eq true
+
+
+// Cheapest books first (ascending is default)
+GET http://localhost:4004/library/Books?$orderby=price
+
+// Most expensive books first
+GET http://localhost:4004/library/Books?$orderby=price desc
+
+// Highest rated books first
+GET http://localhost:4004/library/Books?$orderby=rating desc
+
+// Alphabetical by title
+GET http://localhost:4004/library/Books?$orderby=title
+
+// Sort by genre, then by title within each genre
+GET http://localhost:4004/catalog/Books?$orderby=genre,title
+
+// Newest orders first, then by amount descending
+GET http://localhost:4004/sales/Orders?$orderby=orderDate desc,grossAmount desc
+
+// Sort by multiple criteria with mixed directions
+GET http://localhost:4004/catalog/Books?$orderby=genre asc,price desc
+// First groups by genre A-Z, then within each genre: most expensive first
+
+
+// First 5 books
+GET http://localhost:4004/library/Books?$top=5
+
+// First 5 books, sorted by price
+GET http://localhost:4004/library/Books?$orderby=price&$top=5
+
+// Page 1: First 10 items
+GET http://localhost:4004/library/Books?$top=2&$skip=0
+
+// Page 2: Next 10 items
+GET http://localhost:4004/library/Books?$top=2&$skip=2
+
+// Page 3: Next 10 items
+GET http://localhost:4004/library/Books?$top=2&$skip=4
+
+// Top 3 most expensive books
+GET http://localhost:4004/reports/BookPricing?$orderby=price desc&$top=3
+
+// Second page of results, 20 per page, sorted by title
+GET http://localhost:4004/reports/BookPricing?$orderby=title&$top=2&$skip=2
+
+
+##Queries for OData v4.0 Service at http://localhost:4004/catalog
+@base = http://localhost:4004
+
+### -------------------------------------------------------------------
+### 1. $filter OPTIONS (Conditional Restrictions)
+### -------------------------------------------------------------------
+
+# Query 1: Exact string match (Requires single quotes)
+GET {{base}}/library/Books?$filter=genre eq 'Fantasy'
+
+###
+
+# Query 2: Numeric comparison (No quotes)
+GET {{base}}/library/Books?$filter=price lt 12.00
+
+###
+
+# Query 3: Boolean evaluation
+GET {{base}}/library/Books?$filter=stock gt 0
+
+###
+
+# Query 4: Date comparison (YYYY-MM-DD format)
+GET {{base}}/library/Books?$filter=publishDate ge 1990-01-01
+
+###
+
+# Query 5: Logical AND combination with range filtering
+GET {{base}}/library/Books?$filter=price gt 10 and rating ge 4.5
+
+###
+
+# Query 6: Logical OR combination for multiple categories
+GET {{base}}/library/Books?$filter=genre eq 'Fantasy' or genre eq 'Mystery'
+
+###
+
+# Query 7: Complex grouping using parentheses
+GET {{base}}/library/Books?$filter=(genre eq 'Fantasy' or genre eq 'Fiction') and stock gt 10
+
+###
+
+# Query 8: Null check validation
+GET {{base}}/library/Books?$filter=isbn ne null
+
+
+### -------------------------------------------------------------------
+### 2. $filter STRING FUNCTIONS
+### -------------------------------------------------------------------
+
+# Query 9: Case-sensitive substring matching via contains()
+GET {{base}}/library/Books?$filter=contains(title,'Potter')
+
+###
+
+# Query 10: Case-insensitive substring search using tolower() nested functions
+GET {{base}}/library/Books?$filter=contains(tolower(title),'the')
+
+###
+
+# Query 11: Prefix matching via startswith()
+GET {{base}}/library/Authors?$filter=startswith(name,'J')
+
+
+### -------------------------------------------------------------------
+### 3. $select OPTIONS (Data Minimization / Column Projection)
+### -------------------------------------------------------------------
+
+# Query 12: Basic column limitation (Strictly NO spaces after commas)
+GET {{base}}/library/Books?$select=title,price
+
+###
+
+# Query 13: Column limitation paired with a filter condition
+GET {{base}}/library/Books?$select=title,price,rating&$filter=genre eq 'Fantasy'
+
+
+### -------------------------------------------------------------------
+### 4. $orderby OPTIONS (Sorting Results)
+### -------------------------------------------------------------------
+
+# Query 14: Ascending sort explicit order
+GET {{base}}/library/Books?$orderby=price asc
+
+###
+
+# Query 15: Descending sort multi-column arrangement
+GET {{base}}/library/Books?$orderby=genre asc,price desc
+
+
+### -------------------------------------------------------------------
+### 5. PAGINATION & AGGREGATION ($top, $skip, $count)
+### -------------------------------------------------------------------
+
+# Query 16: Top-N limiting pattern
+GET {{base}}/library/Books?$orderby=rating desc&$top=3
+
+###
+
+# Query 17: Standard Pagination Loop (Page 2 assuming a page size of 2)
+GET {{base}}/library/Books?$orderby=title&$top=2&$skip=2
+
+###
+
+# Query 18: Inline count declaration for user interface pagination math
+GET {{base}}/library/Books?$top=2&$skip=0&$count=true
+
+###
+
+# Query 19: Path-segment count (Returns a raw scalar integer number response)
+GET {{base}}/library/Books/$count?$filter=genre eq 'Fantasy'
+
+
+### -------------------------------------------------------------------
+### 6. $expand OPTIONS (Entity Deep Navigations & Joins)
+### -------------------------------------------------------------------
+
+# Query 20: Basic relational expand to pull associated author entity details
+GET {{base}}/library/Books?$expand=author
+
+###
+
+# Query 21: Nested expand projection using semicolons (;) as inner configuration separators
+GET {{base}}/library/Books?$expand=author($select=name,country)
+
+
+### -------------------------------------------------------------------
+### 7. FREE-TEXT SEARCH & COMPLEX COMBINATIONS
+### -------------------------------------------------------------------
+
+# Query 22: High-Performance Real-World Pattern (Filter + Select + Expand + Order + Pagination + Count)
+//GET {{base}}/library/Books?$filter=rating ge 4.0&$select=title,price,rating&$expand=author($select=name)&$orderby=rating desc&$top=10&$skip=0&$count=true
+
+POST library/Books
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "genre": "Fiction",
+  "price": 10.99,
+  "stock": 50,
+  "author_ID": "a1000001-0000-0000-0000-000000000003"
+}

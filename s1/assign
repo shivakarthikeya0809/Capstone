@@ -1,0 +1,55 @@
+let basePrice = 200;
+let day = "Saturday";
+let is3D = true;
+let isIMAX = false;
+let age = 8;
+
+let weekendCharge = 0;
+let threeDCharge = 0;
+let imaxCharge = 0;
+let comboDiscount = 0;
+let discount = 0;
+
+// Weekend surcharge
+if (day === "Saturday" || day === "Sunday") {
+    weekendCharge = 100;
+}
+
+// 3D surcharge
+if (is3D) {
+    threeDCharge = 150;
+}
+
+// IMAX surcharge
+if (isIMAX) {
+    imaxCharge = 200;
+}
+
+// Combo discount
+if (is3D && isIMAX) {
+    comboDiscount = 50;
+}
+
+// Subtotal
+let total = basePrice + weekendCharge +
+            threeDCharge + imaxCharge -
+            comboDiscount;
+
+// Age discount
+if (age < 12) {
+    discount = total * 0.50;
+} else if (age >= 60) {
+    discount = total * 0.30;
+}
+
+// Final price
+let finalPrice = total - discount;
+
+console.log("Base price =", basePrice);
+console.log("Weekend surcharge =", weekendCharge);
+console.log("3D surcharge =", threeDCharge);
+console.log("IMAX surcharge =", imaxCharge);
+console.log("Combo discount =", comboDiscount);
+console.log("Subtotal =", total);
+console.log("Age discount =", discount);
+console.log("FINAL PRICE =", finalPrice)

@@ -1,0 +1,52 @@
+### Create Department
+//POST http://localhost:4004/admin/Departments
+//Content-Type: application/json
+
+//{
+//  "deptName": "Engineering",
+//  "description": "Software Development Department",
+//  "budget": 500000,
+//  "location": "Hyderabad"
+//}
+
+
+POST http://localhost:4004/admin/Employees
+Content-Type: application/json
+
+{
+  "firstName": "Ravi",
+  "lastName": "Kumar",
+  "email": "ravi@company.com",
+  "phone": "9876543210",
+  "hireDate": "2025-06-04",
+  "salary": 80000,
+  "jobTitle": "Software Engineer",
+  "isActive": true,
+  "department_ID": "D001"
+}
+
+### Create Project
+POST http://localhost:4004/admin/Projects
+Content-Type: application/json
+
+{
+  "projectName": "HR Management System",
+  "description": "Employee and Department Management Project",
+  "startDate": "2026-06-01",
+  "endDate": "2026-12-31",
+  "budget": 500000,
+  "status": "Active"
+}
+### Assign Employee to Project
+POST http://localhost:4004/admin/Assignments
+Content-Type: application/json
+
+{
+  "role": "Developer",
+  "allocation": 100,
+  "startDate": "2026-06-01",
+  "endDate": "2026-12-31",
+  "employee_ID": "PUT_EMPLOYEE_ID_HERE",
+  "project_ID": "PUT_PROJECT_ID_HERE"
+}
+

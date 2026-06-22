@@ -1,0 +1,17 @@
+let values = [true, false];
+
+for (let A of values)
+ {
+    for (let B of values)
+     {
+        console.log(
+            "A =", A,
+            "B =", B,
+            "A&&B =", A && B,
+            "A||B =", A || B,
+            "!A =", !A,
+            "A&&!B =", A && !B,
+            "!A||B =", !A || B
+        );
+    }
+}

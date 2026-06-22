@@ -1,19 +1,12 @@
 using { com.epm as epm } from '../db/schema';
+ service salesservice @(path: '/sales') {
 
-service SalesService {
-
-    entity Products as projection on epm.Products {
-        ID,
-        name,
-        description,
-        price,
-        currency,
-        stock,
-        rating
+  entity SalesOrders as projection on epm.SalesOrders
+    actions {
+      action confirm() returns { status: String; message: String; };
+      action cancel(reason: String(500)) returns { status: String; message: String; };
+      action ship(trackingNumber: String(50), carrier: String(50)) returns { status: String; };
     };
 
-    entity Customers as projection on epm.Customers;
-
-    entity SalesOrders as projection on epm.SalesOrders;
-    entity SalesOrderItems as projection on epm.SalesOrderItems;
+  entity Customers as projection on epm.Customers;
 }

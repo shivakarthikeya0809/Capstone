@@ -1,0 +1,74 @@
+@server = http://localhost:4004
+
+### Get Categories
+GET {{server}}/products/Categories
+
+### Get Products
+GET {{server}}/products/Products
+
+### Create Product - Missing Name (400)
+POST {{server}}/products/Products
+Content-Type: application/json
+
+{
+  "price": 1000,
+  "stock": 10,
+  "sku": "SKU001"
+}
+
+### Create Product - Negative Price (400)
+POST {{server}}/products/Products
+Content-Type: application/json
+
+{
+  "productName": "Test Product",
+  "price": -100,
+  "stock": 10,
+  "sku": "SKU001"
+}
+
+### Create Product - Invalid SKU (400)
+POST {{server}}/products/Products
+Content-Type: application/json
+
+{
+  "productName": "Test Product",
+  "price": 1000,
+  "stock": 10,
+  "sku": "abc"
+}
+
+### Create Product - Valid Data (201)
+POST {{server}}/products/Products
+Content-Type: application/json
+
+{
+  "productName": "Gaming Laptop",
+  "description": "High Performance Laptop",
+  "price": 75000,
+  "currency_code": "INR",
+  "stock": 20,
+  "minStock": 10,
+  "rating": 4.5,
+  "status": "Active",
+  "sku": "LAP-00002",
+  "weight": 2.5,
+  "category_ID": "11111111-1111-1111-1111-111111111111"
+}
+
+### Read Products (needsReorder & priceWithTax)
+GET {{server}}/products/Products
+
+### Update Product
+PATCH {{server}}/products/Products(aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa)
+Content-Type: application/json
+
+{
+  "price": 80000
+}
+
+### Delete Product With Stock (409)
+DELETE {{server}}/products/Products(aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa)
+
+### Delete Category With Products (409)
+DELETE {{server}}/products/Categories(11111111-1111-1111-1111-111111111111)
