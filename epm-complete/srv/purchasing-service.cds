@@ -5,12 +5,12 @@ service PurchasingService
   @(requires:'authenticated-user') {
 
   @odata.draft.enabled
-  entity PurchaseOrders @(restrict: [
+  entity PurchaseOrders/* @(restrict: [
     { grant: 'READ', to: 'Viewer', where: 'status = ''Approved'' or status = ''Received''' },
     { grant: ['READ', 'CREATE', 'UPDATE'], to: 'PurchaseManager', where: 'createdBy = $user' },
     { grant: 'READ', to: 'PurchaseManager', where: 'status = ''Submitted''' },
     { grant: '*', to: 'Administrator' }
-  ]) as projection on db.PurchaseOrders {
+  ])*/ as projection on db.PurchaseOrders {
     *,
 
     supplier,
