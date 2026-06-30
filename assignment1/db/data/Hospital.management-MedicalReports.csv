@@ -1,3 +1,0 @@
-ID,patient_ID,doctor_ID,appointment_ID,diagnosis,prescription,testRecommended,recordDate
-f8f3a43e-ff5d-4659-be55-f415c1e9ed52,p3456789098765,a3456789098765432,k33333-3333-3333-33-333333,Arthritis,Pain Killers,X-Ray,2026-06-02
-82e7d4d2-a6c8-4ee0-bc7d-5ff806eda551,p1234567890987,a1234567890987654,k11111-1111-1111-11-111111,Heart Issue,Medication,ECG,2026-06-02
