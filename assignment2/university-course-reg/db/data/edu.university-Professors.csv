@@ -1,6 +1,0 @@
-ID,firstName,lastName,email,phone,departmentCode,designation,joinDate,salary,officeRoom
-1265e924-61dc-4a15-ab06-5a4f86b196de,Rajesh,Sharma,rajesh@techuni.edu,9643776845,CSE,Full,2015-06-01,90000,A101
-1ac7e212-b276-49b3-8125-9a1a42af98a2,Anita,Rao,anita@techuni.edu,9326576545,ECE,Associate,2017-07-10,80000,B201
-cd253944-9141-40b7-b1bd-b97688f48aaa,Vikram,Kumar,vikram@techuni.edu,9234657455,MECH,Assistant,2020-08-15,60000,C301
-2aa32ed4-a42d-471d-ba06-7de7442a7e4a,Priya,Menon,priya@techuni.edu,9432565634,CSE,Associate,2018-03-20,75000,A102
-ea26c49a-f225-4541-8552-2484b6c04931,Suresh,Reddy,suresh@techuni.edu,9235545465,ECE,Full,2014-01-05,95000,B202

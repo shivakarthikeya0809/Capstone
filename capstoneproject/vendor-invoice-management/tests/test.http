@@ -1,0 +1,42 @@
+### Create Invoice - Invalid Amount
+POST http://localhost:4004/odata/v4/vendor-invoice/Invoices
+Content-Type: application/json
+
+{
+  "invoiceNumber": "INV001",
+  "vendorName": "vendorName-3363556",
+  "amount": -100,
+  "invoiceDate": "2026-07-04"
+}
+#####
+POST http://localhost:4004/odata/v4/vendor-invoice/SubmitInvoice
+Content-Type: application/json
+
+{
+  "invoiceID":"44444444-4444-4444-4444-444444444444"
+}
+####
+POST http://localhost:4004/odata/v4/vendor-invoice/ApproveInvoice
+Content-Type: application/json
+
+{
+  "invoiceID":"44444444-4444-4444-4444-444444444444"
+}
+###
+POST http://localhost:4004/odata/v4/vendor-invoice/RejectInvoice
+Content-Type: application/json
+
+{
+  "invoiceID":"44444444-4444-4444-4444-444444444444",
+  "comments":"Incorrect amount"
+}
+### Get Dashboard
+POST http://localhost:4004/odata/v4/vendor-invoice/GetDashboard
+Content-Type: application/json
+
+{}
+####
+POST http://localhost:4004/odata/v4/vendor-invoice/getBusinessPartners
+Content-Type: application/json
+
+{}
