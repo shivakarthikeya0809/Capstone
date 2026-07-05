@@ -1,5 +1,5 @@
 ### Create Invoice - Invalid Amount
-POST http://localhost:4004/odata/v4/vendor-invoice/Invoices
+POST http://localhost:4004/odata/v4/admin/Invoices
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
   "invoiceDate": "2026-07-04"
 }
 #####
-POST http://localhost:4004/odata/v4/vendor-invoice/SubmitInvoice
+POST http://localhost:4004/odata/v4/admin/draftInvoice
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
   "invoiceID":"44444444-4444-4444-4444-444444444444"
 }
 ###
-POST http://localhost:4004/odata/v4/vendor-invoice/RejectInvoice
+POST http://localhost:4004/odata/v4/approve/RejectInvoice
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 
 {}
 ####
-POST http://localhost:4004/odata/v4/vendor-invoice/getBusinessPartners
+POST http://localhost:4004/odata/v4/api-business-partner/A_AddressEmailAddress
 Content-Type: application/json
 
 {}

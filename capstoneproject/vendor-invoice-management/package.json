@@ -23,7 +23,8 @@
     "watch-project1": "cds watch --open vendor.invoice.project1/index.html?sap-ui-xx-viewCache=false --livereload false",
     "undeploy": "cf undeploy vendor-invoice-management --delete-services --delete-service-keys --delete-service-brokers",
     "build": "rimraf resources mta_archives && mbt build --mtar archive",
-    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "watch-project4": "cds watch --open project4/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "cds": {
@@ -69,10 +70,7 @@
       "workzone": true,
       "API_BUSINESS_PARTNER": {
         "kind": "odata-v2",
-        "model": "srv/external/API_BUSINESS_PARTNER",
-        "credentials": {
-          "destination": "S4HANA"
-        }
+        "model": "srv/external/API_BUSINESS_PARTNER"
       }
     }
   },
@@ -80,7 +78,6 @@
     "app/*"
   ],
   "sapux": [
-    "app/project1",
     "app/project1",
     "app/project1"
   ]

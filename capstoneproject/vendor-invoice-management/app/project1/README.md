@@ -1,13 +1,13 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sat Jul 04 2026 06:40:58 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Sun Jul 05 2026 06:26:01 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
 |**App Generator Version**<br>1.27.0|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V4|
 |**Service Type**<br>Local CAP|
-|**Service URL**<br>http://localhost:4004/odata/v4/vendor-invoice/|
+|**Service URL**<br>http://localhost:4004/odata/v4/admin/|
 |**Module Name**<br>project1|
 |**Application Title**<br>App Title|
 |**Namespace**<br>vendor.invoice|

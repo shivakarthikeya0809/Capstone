@@ -27,6 +27,8 @@ this.before(["CREATE", "UPDATE"], "Invoices", async (req) => {
 
 // Auto calculate total price
 this.before(["CREATE", "UPDATE"], "InvoiceItems", async (req) => {
+    req.data.status="DRAFT";
+    req.data.criticality=5;
 
     if (req.data.quantity != null && req.data.unitPrice != null) {
         req.data.totalPrice = req.data.quantity * req.data.unitPrice;
@@ -81,7 +83,8 @@ if (invoice.status !== "DRAFT") {
 
         await UPDATE(Invoices)
             .set({
-                status: "SUBMITTED"
+                status: "SUBMITTED",
+                criticality:2
             })
             .where({ ID: id });
 
@@ -114,6 +117,7 @@ if (invoice.status !== "SUBMITTED") {
         await UPDATE(Invoices)
             .set({
                 status: "APPROVED",
+                criticality:3,
                 approvedBy: req.user.id
             })
             .where({ ID: id });
@@ -147,6 +151,7 @@ if (invoice.status !== "SUBMITTED") {
         await UPDATE(Invoices)
             .set({
                 status: "REJECTED",
+                criticality:1,
                 rejectionReason: req.data.reason,
                 rejectedBy: req.user.id
             })

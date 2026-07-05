@@ -13,11 +13,11 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.27.0",
-      "toolsId": "fd1b58d7-35ab-42de-aa0e-9a7c30eede53"
+      "toolsId": "5040b201-37a4-4a39-b647-5ca27776a810"
     },
     "dataSources": {
       "mainService": {
-        "uri": "/odata/v4/vendor-invoice/",
+        "uri": "/odata/v4/admin/",
         "type": "OData",
         "settings": {
           "annotations": [],

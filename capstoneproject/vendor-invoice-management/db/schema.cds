@@ -34,8 +34,6 @@ entity Invoices : cuid, managed {
 
     currency       : String(5);
 
-    status         : String(20);
-
     submittedBy    : String(100);
 
     approvedBy     : String(100);
@@ -43,6 +41,10 @@ entity Invoices : cuid, managed {
     rejectedBy     : String(100);
 
     rejectionReason: String(500);
+
+    status:String(20) default 'DRAFT';
+
+    criticality:Integer default 5;
 
     items          : Composition of many InvoiceItems
                      on items.invoice = $self;

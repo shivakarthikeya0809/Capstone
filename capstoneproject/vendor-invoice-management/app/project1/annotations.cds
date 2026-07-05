@@ -1,4 +1,4 @@
-using VendorInvoiceService as service from '../../srv/service';
+using AdminService as service from '../../srv/admin-service';
 
 annotate service.Invoices with @(
 
@@ -23,7 +23,7 @@ annotate service.Invoices with @(
         { $Type : 'UI.DataField', Label : 'Due Date', Value : dueDate },
         { $Type : 'UI.DataField', Label : 'Amount', Value : amount },
         { $Type : 'UI.DataField', Label : 'Currency', Value : currency },
-        { $Type : 'UI.DataField', Label : 'Status', Value : status }
+        { $Type : 'UI.DataField', Label : 'Status', Value : status ,Criticality:criticality}
     ],
 
     UI.Identification : [
